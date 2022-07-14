@@ -70,8 +70,6 @@
 			camera.position.set(0, 250, 1000);
 			scene.add(camera);
 
-
-
 			const planeGeometry = new THREE.PlaneGeometry(2000, 2000);
 			planeGeometry.rotateX(- Math.PI / 2);
 			const planeMaterial = new THREE.ShadowMaterial({ color: 0x000000, opacity: 0.2 });
@@ -162,9 +160,7 @@
 		function addSplineObject(position) {
 			const material = new THREE.MeshLambertMaterial({ color: Math.random() * 0xffffff });
 			const object = new THREE.Mesh(geometry, material);
-			if (position) {
-				object.position.copy(position);
-			}
+			object.position.copy(position);
 			scene.add(object);
 			splineHelperObjects.push(object);
 			return object;
